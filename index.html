@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThreeJS Starter</title>
+  <link rel="stylesheet" href="general.css">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <div id="preloader">
+    <div class="loader"></div>
+  </div>
+  <div class="custom-cursor"></div>
+  <canvas class="webgl"></canvas>
+
+  <main class="flex-container column center">
+
+    <header class="flex-container row">
+      <div class="flex-start header-item padding">
+        <p class="header-name">Lina Seyfried</p>
+      </div>
+      <div class="flex-end header-item header-links padding">
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+      </div>
+    </header>
+
+    <section class="hero center flex">
+      <section class="hero-header">
+        <h1 class="padding hero-text" id="typing-effect-1">Hi, I'm Lina!</h1>
+        <h2 class="padding hero-text" id="typing-effect-2">I love to design, code and craft immersive digital experiences.</h2>
+      </section>
+    </section>
+
+    <section class="projectsSection">
+      <section id="projects" class="projectsContent">
+        <h2 class="paddingHeading">Recent Projects</h2>
+        <div class="projects">
+          <div class="project">
+            <a href="project2.html">
+              <img src="Pics/Ithaca.png" alt="Project 2">
+              <h3>Ithaca Viewer & Ithaca Editor</h3>
+              <p>Fraunhofer Research Project</p>
+            </a>
+          </div>
+          <div class="project">
+            <a href="project1.html">
+              <img src="Pics/project1pix.png" alt="Project 1">
+              <h3>MainLife – The Event App for Freshmen</h3>
+              <p>UX Case Study</p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <footer id="about">
+      <div class="aboutSection column">
+        <h2 class="paddingHeading">About</h2>
+        <div class="aboutContent">
+          <img src="Pics/cartoonLina.png" alt="Picture of Lina">
+          <div class="aboutText column gap">
+            <h3>I'm Lina – an aspiring UX/UI-Designer & immersive media developer based in Berlin!</h3>
+            <p>
+              I’m currently pursuing a <strong>Master’s degree in Media Informatics</strong> at the Berlin University of Applied Sciences (BHT). 
+              Previously, I earned my <strong>Bachelor’s degree in Human-Computer Interaction</strong>, where I developed a strong foundation in user-centered design.
+              Alongside my studies, I work at <strong>Fraunhofer IPK</strong> as a UX designer and Unity developer, crafting intuitive interfaces and immersive experiences for research-driven projects.
+            </p>
+            <p>
+              When I'm not designing or coding, you’ll probably find me bouldering, trying out new coffee spots, or getting inspired by Berlin’s creative corners :)
+            </p>
+          </div>
+        </div>
+        <p class="copyright">Designed & coded with ❤️ by Lina Seyfried. Powered by HTML, CSS, JavaScript & Three.js</p>
+      </div>
+    </footer>
+  </main>
+
+  <script type="module" src="main.js"></script>
+  <script type="module" src="mouse.js"></script>
+  <script type="module" src="links.js"></script>
+  <script type="module" src="typing.js"></script>
+</body>
+
+</html>

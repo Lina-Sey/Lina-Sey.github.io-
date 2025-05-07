@@ -1,0 +1,175 @@
+@import url("https://use.typekit.net/jmk3xov.css");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* Root-Variablen & globale Einstellungen */
+:root {
+  --dark-bg: rgba(15, 15, 15, 0.95);
+  --text-color: black;
+  --accent-color: white;
+  --spacing: 400;
+  --mouseScale: 3;
+  --padding: 20px;
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+  cursor: none;
+}
+
+main {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  cursor: none;
+}
+
+/* Typografie */
+h1, h2, h3, blockquote, button {
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 200;
+}
+
+
+/* Flex */
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-end {
+  justify-content: flex-end;
+  text-align: end;
+}
+
+.center {
+  align-items: center;
+}
+
+
+.padding {
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+}
+
+.paddingHeading {
+  padding-bottom: 50px;
+}
+
+
+/* Header */
+header {
+  display: flex;
+  width: 70%;
+  justify-content: center;
+  height: 40px;
+}
+
+.header-item {
+  width: 50%;
+  padding: 20px 20px 0px 20px;
+}
+
+.header-links {
+  display: flex;
+  gap: 30px; 
+}
+
+.header-links a {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 5px; 
+  margin: -8px -5px;
+  color: var(--text-color);
+}
+
+header a, 
+header a:visited, 
+header a:hover, 
+header a:active {
+  color: black;
+  text-decoration: none;
+  cursor: none;
+} 
+
+.header-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 8px;
+  width: 0;
+  height: 1px;
+  background-color:  var(--text-color); 
+  transition: width 0.3s ease-in-out;
+}
+
+.header-links a:hover::after {
+  width: 100%;
+}
+
+
+
+/* Footer */
+footer {
+  background-color: black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+
+/* Custom Cursor */
+.custom-cursor {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  transition: width 0.2s ease-out, height 0.2s ease-out, transform 0.2s ease-out;
+  mix-blend-mode: difference;
+  background-color: var(--accent-color);
+}
+
+.custom-cursor.hovered {
+  width: 26px;
+  height: 26px;
+  transform: scale(var(--mouseScale));
+  transition: width 0.25s ease-out, height 0.25s ease-out;
+}
